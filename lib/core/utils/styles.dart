@@ -37,6 +37,15 @@ abstract class Styles {
     );
   }
 
+  static TextStyle Reguler16(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      color: Color(0xff677294),
+      fontFamily: "Rubik",
+      fontWeight: FontWeight.w400,
+    );
+  }
+
   static TextStyle Ligth20(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 20),

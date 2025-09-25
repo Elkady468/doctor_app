@@ -1,3 +1,4 @@
+import 'package:doctor_app/feature/home/presentation/views/home_view.dart';
 import 'package:doctor_app/feature/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,6 @@ class DoctorApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashView());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomeView());
   }
 }
