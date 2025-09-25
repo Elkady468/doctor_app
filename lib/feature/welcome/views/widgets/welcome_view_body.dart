@@ -1,7 +1,8 @@
-import 'package:doctor_app/core/utils/Assets.dart';
 import 'package:doctor_app/core/utils/styles.dart';
+import 'package:doctor_app/feature/welcome/views/widgets/custom_button.dart';
+import 'package:doctor_app/feature/welcome/views/widgets/on_boarding_page_view.dart'
+    show onBoardingPageView;
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class WelcomeViewBody extends StatelessWidget {
   const WelcomeViewBody({super.key});
@@ -12,20 +13,17 @@ class WelcomeViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(height: MediaQuery.of(context).size.height * .11206),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 19),
-          height: MediaQuery.of(context).size.height * .41379,
-          width: double.infinity,
-          child: Image.asset(Assets.Doctor1),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * .7,
+          child: onBoardingPageView(),
         ),
-        SizedBox(height: 80),
-        Text("Find Trusted Doctors", style: Styles.Medium28(context)),
-        SizedBox(height: 11),
-        Text(
-          textAlign: TextAlign.center,
-          "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of it over 2000 years old.",
-          style: Styles.Reguler14(context),
+
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: CustomBotton(),
         ),
+        SizedBox(height: 14),
+        InkWell(child: Text("Skip", style: Styles.Reguler14(context))),
       ],
     );
   }
