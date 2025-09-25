@@ -1,4 +1,5 @@
 import 'package:doctor_app/core/utils/styles.dart';
+import 'package:doctor_app/feature/home/presentation/views/home_view.dart';
 import 'package:doctor_app/feature/welcome/views/widgets/custom_button.dart';
 import 'package:doctor_app/feature/welcome/views/widgets/on_boarding_page_view.dart'
     show onBoardingPageView;
@@ -20,10 +21,33 @@ class WelcomeViewBody extends StatelessWidget {
 
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: CustomBotton(),
+          child: CustomBotton(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return HomeView();
+                  },
+                ),
+              );
+            },
+          ),
         ),
         SizedBox(height: 14),
-        InkWell(child: Text("Skip", style: Styles.Reguler14(context))),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return HomeView();
+                },
+              ),
+            );
+          },
+          child: Text("Skip", style: Styles.Reguler14(context)),
+        ),
       ],
     );
   }
