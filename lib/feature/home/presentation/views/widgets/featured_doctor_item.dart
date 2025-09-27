@@ -39,7 +39,7 @@ class FeaturedDoctorItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("\$", style: Styles.Medium9(context)),
+              Text("\$ ", style: Styles.Medium9(context)),
               Text(featuredDoctorModel.price, style: Styles.Ligth9(context)),
             ],
           ),

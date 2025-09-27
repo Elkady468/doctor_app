@@ -14,6 +14,7 @@ class DoctorPopulerHeader extends StatelessWidget {
           children: [
             Text("See all", style: Styles.Ligth12(context)),
             Icon(Icons.arrow_forward_ios, size: 12, color: Color(0xff677294)),
+            SizedBox(width: 15),
           ],
         ),
       ],

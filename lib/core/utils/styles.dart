@@ -91,6 +91,15 @@ abstract class Styles {
     );
   }
 
+  static TextStyle Ligth14(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 14),
+      color: Colors.white,
+      fontFamily: "Rubik",
+      fontWeight: FontWeight.w300,
+    );
+  }
+
   static TextStyle Ligth9(context) {
     return TextStyle(
       color: const Color(0xFF677294),

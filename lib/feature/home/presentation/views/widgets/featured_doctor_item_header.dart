@@ -11,7 +11,7 @@ class FeaturedDoctorItemHeader extends StatefulWidget {
 }
 
 class _FeaturedDoctorItemHeaderState extends State<FeaturedDoctorItemHeader> {
-  bool isFav = true;
+  bool isFav = false;
   @override
   Widget build(BuildContext context) {
     return Row(

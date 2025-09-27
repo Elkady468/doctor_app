@@ -20,4 +20,11 @@ class Assets {
   static String featuredDoctor1 = "assets/images/Ellipse 141.png";
   static String featuredDoctor2 = "assets/images/Ellipse 141 (1).png";
   static String featuredDoctor3 = "assets/images/image (1).png";
+  static String liveDoctorimage = "assets/images/Rectangle 509.png";
+  static String blur = "assets/images/Rectangle 521.png";
+  static String comment1 = "assets/images/Ellipse 139.png";
+  static String comment2 = "assets/images/Ellipse 139 (1).png";
+  static String comment3 = "assets/images/Ellipse 139 (2).png";
+  static String comment4 = "assets/images/Ellipse 139 (3).png";
+  static String addComment = "assets/images/menu.png";
 }
