@@ -1,5 +1,4 @@
 import 'package:doctor_app/feature/home/presentation/views/home_view.dart';
-import 'package:doctor_app/feature/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
