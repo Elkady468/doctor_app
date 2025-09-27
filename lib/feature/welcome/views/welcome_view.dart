@@ -1,7 +1,6 @@
 import 'package:doctor_app/core/utils/Assets.dart';
 import 'package:doctor_app/feature/welcome/views/widgets/welcome_view_body.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({super.key});

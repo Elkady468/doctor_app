@@ -2,13 +2,13 @@ import 'package:doctor_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class DoctorPopulerHeader extends StatelessWidget {
-  const DoctorPopulerHeader({super.key});
-
+  const DoctorPopulerHeader({super.key, required this.text});
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("Popular Doctor", style: Styles.Medium18(context)),
+        Text(text, style: Styles.Medium18(context)),
         Spacer(),
         Row(
           children: [
