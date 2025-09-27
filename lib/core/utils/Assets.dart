@@ -16,4 +16,5 @@ class Assets {
   static String depr4 = "assets/images/Group 667 (1).png";
   static String populerDoctor1 = "assets/images/image.png";
   static String populerDoctor2 = "assets/images/Rectangle 508.png";
+  static String rateStar = "assets/images/star.png";
 }

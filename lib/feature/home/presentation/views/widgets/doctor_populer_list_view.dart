@@ -7,10 +7,14 @@ class DoctorPopulerListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: EdgeInsets.zero,
       scrollDirection: Axis.horizontal,
       itemCount: 5,
       itemBuilder: (context, index) {
-        return DoctorPopulerItem();
+        return Padding(
+          padding: const EdgeInsets.only(right: 15.0),
+          child: DoctorPopulerItem(),
+        );
       },
     );
   }

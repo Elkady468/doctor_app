@@ -2,6 +2,7 @@ import 'package:doctor_app/core/utils/styles.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/deprs.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/doctor_populer_header.dart';
+import 'package:doctor_app/feature/home/presentation/views/widgets/doctor_populer_list_view.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/live_doctor_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -31,10 +32,14 @@ class HomeViewBody extends StatelessWidget {
               SliverToBoxAdapter(child: SizedBox(height: 30)),
               SliverToBoxAdapter(child: Deprs()),
               SliverToBoxAdapter(child: DoctorPopulerHeader()),
-
-              // SliverToBoxAdapter(
-              //   child: SizedBox(height: 100, child: DoctorPopulerListView()),
-              // ),
+              SliverToBoxAdapter(child: SizedBox(height: 50)),
+              SliverToBoxAdapter(
+                child: SizedBox(
+                  height: MediaQuery.sizeOf(context).height * .34,
+                  child: DoctorPopulerListView(),
+                ),
+              ),
+              SliverToBoxAdapter(child: SizedBox(height: 100)),
             ],
           ),
         ),
