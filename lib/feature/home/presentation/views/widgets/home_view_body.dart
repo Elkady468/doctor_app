@@ -1,6 +1,7 @@
 import 'package:doctor_app/core/utils/styles.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/deprs.dart';
+import 'package:doctor_app/feature/home/presentation/views/widgets/featured_doctor_section.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/live_doctor_list_view.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/populer_doctor_section.dart';
 import 'package:flutter/material.dart';
@@ -16,24 +17,29 @@ class HomeViewBody extends StatelessWidget {
         SizedBox(height: 45),
 
         Expanded(
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: Text("Live Doctors", style: Styles.Medium18(context)),
-              ),
-              SliverToBoxAdapter(
-                child: SizedBox(
-                  height:
-                      MediaQuery.of(context).size.height * .2463054187192118,
-                  child: LiveDoctorListView(),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Text("Live Doctors", style: Styles.Medium18(context)),
                 ),
-              ),
-              SliverToBoxAdapter(child: SizedBox(height: 30)),
-              SliverToBoxAdapter(child: Deprs()),
-              SliverToBoxAdapter(child: SizedBox(height: 22)),
-              SliverToBoxAdapter(child: PopulerDoctorSection()),
-              SliverToBoxAdapter(child: SizedBox(height: 100)),
-            ],
+                SliverToBoxAdapter(
+                  child: SizedBox(
+                    height:
+                        MediaQuery.of(context).size.height * .2463054187192118,
+                    child: LiveDoctorListView(),
+                  ),
+                ),
+                SliverToBoxAdapter(child: SizedBox(height: 30)),
+                SliverToBoxAdapter(child: Deprs()),
+                SliverToBoxAdapter(child: SizedBox(height: 22)),
+                SliverToBoxAdapter(child: PopulerDoctorSection()),
+                SliverToBoxAdapter(child: SizedBox(height: 22)),
+                SliverToBoxAdapter(child: FeaturedDoctorSection()),
+                SliverToBoxAdapter(child: SizedBox(height: 20)),
+              ],
+            ),
           ),
         ),
       ],

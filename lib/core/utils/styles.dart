@@ -28,6 +28,33 @@ abstract class Styles {
     );
   }
 
+  static TextStyle Medium12(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 12),
+      color: Colors.black,
+      fontFamily: "Rubik",
+      fontWeight: FontWeight.w500,
+    );
+  }
+
+  static TextStyle Medium9(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 9),
+      color: Color(0xff0EBE7E),
+      fontFamily: "Rubik",
+      fontWeight: FontWeight.w500,
+    );
+  }
+
+  static TextStyle Medium10(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 10),
+      color: Colors.black,
+      fontFamily: "Rubik",
+      fontWeight: FontWeight.w500,
+    );
+  }
+
   static TextStyle Reguler14(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 14),
