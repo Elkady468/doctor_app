@@ -1,6 +1,6 @@
 import 'package:doctor_app/core/utils/Assets.dart';
-import 'package:doctor_app/feature/welcome/data/models/on_boarding_model.dart';
-import 'package:doctor_app/feature/welcome/views/widgets/on_boarding_info.dart';
+import 'package:doctor_app/feature/start/data/models/on_boarding_model.dart';
+import 'package:doctor_app/feature/start/views/widgets/on_boarding_info.dart';
 import 'package:flutter/material.dart';
 
 class onBoardingPageView extends StatelessWidget {

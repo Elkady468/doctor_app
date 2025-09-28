@@ -1,8 +1,10 @@
 import 'package:doctor_app/core/utils/styles.dart';
 import 'package:doctor_app/feature/home/presentation/views/home_view.dart';
-import 'package:doctor_app/feature/welcome/views/widgets/custom_button.dart';
-import 'package:doctor_app/feature/welcome/views/widgets/on_boarding_page_view.dart'
-    show onBoardingPageView;
+import 'package:doctor_app/feature/start/views/widgets/custom_button.dart';
+import 'package:doctor_app/feature/start/views/widgets/on_boarding_page_view.dart';
+import 'package:doctor_app/welcome/presentation/views/login_page.dart';
+
+import 'package:doctor_app/welcome/presentation/views/register_page.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeViewBody extends StatelessWidget {
@@ -27,7 +29,7 @@ class WelcomeViewBody extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return HomeView();
+                    return LoginPage();
                   },
                 ),
               );
@@ -41,7 +43,7 @@ class WelcomeViewBody extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return HomeView();
+                  return LoginPage();
                 },
               ),
             );
