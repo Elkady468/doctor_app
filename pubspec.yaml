@@ -88,6 +88,9 @@ flutter:
           weight: 700
         - asset: assets/fonts/Rubik-Medium.ttf
           weight: 500
+    - family: PTSans
+      fonts: 
+        - asset: assets/fonts/PTSans-Regular.ttf      
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf

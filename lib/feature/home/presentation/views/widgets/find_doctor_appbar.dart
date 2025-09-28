@@ -25,7 +25,7 @@ class FindDoctorAppbar extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 10),
+        SizedBox(width: 20),
         Text("Find Doctor", style: Styles.Reguler18(context)),
       ],
     );

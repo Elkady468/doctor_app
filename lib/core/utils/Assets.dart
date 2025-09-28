@@ -27,4 +27,7 @@ class Assets {
   static String comment3 = "assets/images/Ellipse 139 (2).png";
   static String comment4 = "assets/images/Ellipse 139 (3).png";
   static String addComment = "assets/images/menu.png";
+  static String findDoctor1 = "assets/images/Rectangle 506.png";
+  static String findDoctor2 = "assets/images/Rectangle 506 (1).png";
+  static String findDoctor3 = "assets/images/Rectangle 506 (2).png";
 }

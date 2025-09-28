@@ -37,6 +37,15 @@ abstract class Styles {
     );
   }
 
+  static TextStyle Medium13(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 13),
+      color: Color(0xff0EBE7F),
+      fontFamily: "Rubik",
+      fontWeight: FontWeight.w500,
+    );
+  }
+
   static TextStyle Medium9(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 9),
@@ -52,6 +61,15 @@ abstract class Styles {
       color: Colors.black,
       fontFamily: "Rubik",
       fontWeight: FontWeight.w500,
+    );
+  }
+
+  static TextStyle Reguler13(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 13),
+      color: Color(0xff0EBE7F),
+      fontFamily: "PTSans",
+      fontWeight: FontWeight.w400,
     );
   }
 
@@ -86,6 +104,15 @@ abstract class Styles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       color: Colors.white,
+      fontFamily: "Rubik",
+      fontWeight: FontWeight.w300,
+    );
+  }
+
+  static TextStyle Ligth11(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 11),
+      color: Color(0xff677294),
       fontFamily: "Rubik",
       fontWeight: FontWeight.w300,
     );

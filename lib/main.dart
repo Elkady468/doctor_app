@@ -26,7 +26,7 @@ class DoctorApp extends StatelessWidget {
         BlocProvider(create: (context) => UserDataCubit()..getUserData()),
       ],
 
-      child: MaterialApp(debugShowCheckedModeBanner: false, home: SplashView()),
+      child: MaterialApp(debugShowCheckedModeBanner: false, home: HomeView()),
     );
   }
 }

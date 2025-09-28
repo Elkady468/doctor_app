@@ -45,7 +45,7 @@ class CustomAppBar extends StatelessWidget {
           bottom: -20,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: CustomTextField(),
+            child: CustomTextField(hintText: "Search..."),
           ),
         ),
       ],
