@@ -1,4 +1,5 @@
 import 'package:doctor_app/core/utils/styles.dart';
+import 'package:doctor_app/feature/home/presentation/views/widgets/custom_fav_icon.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedDoctorItemHeader extends StatefulWidget {
@@ -16,20 +17,7 @@ class _FeaturedDoctorItemHeaderState extends State<FeaturedDoctorItemHeader> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        InkWell(
-          onTap: () {
-            setState(() {
-              isFav = !isFav;
-            });
-          },
-          child: isFav
-              ? Icon(Icons.favorite_rounded, color: Colors.red, size: 14)
-              : Icon(
-                  Icons.favorite_border_outlined,
-                  color: Color(0xff777EA5),
-                  size: 14,
-                ),
-        ),
+        CustomFavIcon(iconSize: 14),
         Spacer(),
         Icon(Icons.star, color: Color(0xffF6D060), size: 14),
         Text(widget.rate.toStringAsFixed(1), style: Styles.Medium10(context)),

@@ -1,9 +1,9 @@
 import 'package:doctor_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class FindDoctorAppbar extends StatelessWidget {
-  const FindDoctorAppbar({super.key});
-
+class CustomDoctorAppbar extends StatelessWidget {
+  const CustomDoctorAppbar({super.key, required this.text});
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -26,7 +26,7 @@ class FindDoctorAppbar extends StatelessWidget {
           ),
         ),
         SizedBox(width: 20),
-        Text("Find Doctor", style: Styles.Reguler18(context)),
+        Text(text, style: Styles.Medium18(context)),
       ],
     );
   }

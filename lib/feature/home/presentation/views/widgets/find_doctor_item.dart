@@ -1,17 +1,13 @@
 import 'package:doctor_app/core/utils/Assets.dart';
 import 'package:doctor_app/core/utils/styles.dart';
 import 'package:doctor_app/feature/home/data/models/find_doctor_model.dart';
+import 'package:doctor_app/feature/home/presentation/views/select_time_view.dart';
+import 'package:doctor_app/feature/home/presentation/views/widgets/custom_fav_icon.dart';
 import 'package:flutter/material.dart';
 
-class FindDoctorItem extends StatefulWidget {
+class FindDoctorItem extends StatelessWidget {
   const FindDoctorItem({super.key, required this.findDoctorModel});
   final FindDoctorModel findDoctorModel;
-  @override
-  State<FindDoctorItem> createState() => _FindDoctorItemState();
-}
-
-class _FindDoctorItemState extends State<FindDoctorItem> {
-  bool isFav = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +29,7 @@ class _FindDoctorItemState extends State<FindDoctorItem> {
           Row(
             children: [
               Image.asset(
-                widget.findDoctorModel.image,
+                findDoctorModel.image,
                 height: MediaQuery.sizeOf(context).height * .1071428571428571,
               ),
               SizedBox(width: 10),
@@ -45,35 +41,18 @@ class _FindDoctorItemState extends State<FindDoctorItem> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        widget.findDoctorModel.doctorName,
+                        findDoctorModel.doctorName,
                         style: Styles.Medium18(context),
                       ),
                       //  Spacer(),
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            isFav = !isFav;
-                          });
-                        },
-                        child: isFav
-                            ? Icon(
-                                Icons.favorite_rounded,
-                                color: Colors.red,
-                                size: 22,
-                              )
-                            : Icon(
-                                Icons.favorite_border_outlined,
-                                color: Color(0xff777EA5),
-                                size: 22,
-                              ),
-                      ),
+                      CustomFavIcon(iconSize: 22),
                     ],
                   ),
                   SizedBox(height: 5),
                   Text("Tooths Dentist", style: Styles.Reguler13(context)),
                   SizedBox(height: 3),
                   Text(
-                    "${widget.findDoctorModel.experienceCount} Years experience ",
+                    "${findDoctorModel.experienceCount} Years experience ",
                     style: Styles.Ligth12(context),
                   ),
                   SizedBox(height: 5),
@@ -88,7 +67,7 @@ class _FindDoctorItemState extends State<FindDoctorItem> {
                         ),
                       ),
                       Text(
-                        " ${widget.findDoctorModel.percentage}%",
+                        " ${findDoctorModel.percentage}%",
                         style: Styles.Ligth11(context),
                       ),
                       SizedBox(width: 15),
@@ -101,7 +80,7 @@ class _FindDoctorItemState extends State<FindDoctorItem> {
                         ),
                       ),
                       Text(
-                        " ${widget.findDoctorModel.patientStories} Patient Stories",
+                        " ${findDoctorModel.patientStories} Patient Stories",
                         style: Styles.Ligth11(context),
                       ),
                     ],
@@ -122,7 +101,7 @@ class _FindDoctorItemState extends State<FindDoctorItem> {
                   Row(
                     children: [
                       Text(
-                        "${widget.findDoctorModel.time} ",
+                        "${findDoctorModel.time} ",
                         style: Styles.Medium12(
                           context,
                         ).copyWith(color: Color(0xff677294)),
@@ -132,7 +111,18 @@ class _FindDoctorItemState extends State<FindDoctorItem> {
                   ),
                 ],
               ),
-              CustomBookContainer(),
+              CustomBookContainer(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SelectTimeView();
+                      },
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ],
@@ -142,19 +132,22 @@ class _FindDoctorItemState extends State<FindDoctorItem> {
 }
 
 class CustomBookContainer extends StatelessWidget {
-  const CustomBookContainer({super.key});
-
+  const CustomBookContainer({super.key, this.onTap});
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 28),
-      decoration: ShapeDecoration(
-        color: const Color.fromARGB(255, 69, 231, 174),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-      ),
-      child: Text(
-        "Book Now",
-        style: Styles.Medium12(context).copyWith(color: Colors.white),
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 28),
+        decoration: ShapeDecoration(
+          color: const Color.fromARGB(255, 69, 231, 174),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+        ),
+        child: Text(
+          "Book Now",
+          style: Styles.Medium12(context).copyWith(color: Colors.white),
+        ),
       ),
     );
   }

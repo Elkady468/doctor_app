@@ -15,7 +15,7 @@ class FindDoctorBody extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 60),
-            FindDoctorAppbar(),
+            CustomDoctorAppbar(text: "Find Doctor"),
             SizedBox(height: 30),
             CustomTextField(hintText: "Dentist"),
             SizedBox(height: 30),
