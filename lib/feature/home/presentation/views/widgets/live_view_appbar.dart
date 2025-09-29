@@ -2,8 +2,8 @@ import 'package:doctor_app/core/utils/Assets.dart';
 import 'package:flutter/material.dart';
 
 class LiveViewAppbar extends StatelessWidget {
-  const LiveViewAppbar({super.key});
-
+  const LiveViewAppbar({super.key, required this.widget});
+  final Widget widget;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -26,7 +26,7 @@ class LiveViewAppbar extends StatelessWidget {
             ),
           ),
         ),
-        Image.asset(Assets.featuredDoctor3, height: 40),
+        widget,
       ],
     );
   }

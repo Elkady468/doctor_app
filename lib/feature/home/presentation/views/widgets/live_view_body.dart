@@ -36,7 +36,9 @@ class LiveViewBody extends StatelessWidget {
         SizedBox(height: 50),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: LiveViewAppbar(),
+          child: LiveViewAppbar(
+            widget: Image.asset(Assets.featuredDoctor3, height: 40),
+          ),
         ),
         Spacer(),
         CommentListTile(commentModel: comments[0]),

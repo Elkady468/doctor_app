@@ -1,11 +1,19 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:doctor_app/core/utils/Assets.dart';
+import 'package:doctor_app/feature/home/presentation/views/favourite_doctor_view.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +29,11 @@ class HomeView extends StatelessWidget {
           TabItem(icon: Icons.book, title: 'book'),
           TabItem(icon: Icons.message, title: 'message'),
         ],
-        onTap: (int i) => print('click index=$i'),
+        onTap: (Index) {
+          currentIndex = Index;
+
+          setState(() {});
+        },
       ),
       body: Stack(
         children: [
@@ -31,9 +43,16 @@ class HomeView extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          HomeViewBody(),
+          _widgetsBodes[currentIndex],
         ],
       ),
     );
   }
+
+  final List<Widget> _widgetsBodes = [
+    HomeViewBody(),
+    FavouriteDoctorView(),
+    SizedBox(),
+    SizedBox(),
+  ];
 }

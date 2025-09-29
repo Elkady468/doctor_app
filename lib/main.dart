@@ -1,5 +1,4 @@
 import 'package:doctor_app/feature/home/presentation/views/home_view.dart';
-import 'package:doctor_app/feature/splash/presentation/views/splash_view.dart';
 import 'package:doctor_app/welcome/presentation/manager/Register_cubit/register_cubit.dart';
 import 'package:doctor_app/welcome/presentation/manager/login_cubits/login_cubit.dart';
 import 'package:doctor_app/welcome/presentation/manager/user_data_cubit/user_data_cubit.dart';
