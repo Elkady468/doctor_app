@@ -30,4 +30,5 @@ class Assets {
   static String findDoctor1 = "assets/images/Rectangle 506.png";
   static String findDoctor2 = "assets/images/Rectangle 506 (1).png";
   static String findDoctor3 = "assets/images/Rectangle 506 (2).png";
+  static String mapImage = "assets/images/Rectangle 523.png";
 }

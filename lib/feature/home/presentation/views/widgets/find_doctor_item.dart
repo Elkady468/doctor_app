@@ -2,6 +2,7 @@ import 'package:doctor_app/core/utils/Assets.dart';
 import 'package:doctor_app/core/utils/styles.dart';
 import 'package:doctor_app/feature/home/data/models/find_doctor_model.dart';
 import 'package:doctor_app/feature/home/presentation/views/select_time_view.dart';
+import 'package:doctor_app/feature/home/presentation/views/widgets/custom_book_container.dart';
 import 'package:doctor_app/feature/home/presentation/views/widgets/custom_fav_icon.dart';
 import 'package:flutter/material.dart';
 
@@ -126,28 +127,6 @@ class FindDoctorItem extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-
-class CustomBookContainer extends StatelessWidget {
-  const CustomBookContainer({super.key, this.onTap});
-  final void Function()? onTap;
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 28),
-        decoration: ShapeDecoration(
-          color: const Color.fromARGB(255, 69, 231, 174),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-        ),
-        child: Text(
-          "Book Now",
-          style: Styles.Medium12(context).copyWith(color: Colors.white),
-        ),
       ),
     );
   }
